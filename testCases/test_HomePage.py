@@ -26,6 +26,6 @@ class Test_HomePage:
 
         self.hp = HomePage(self.driver)
 
-        self.hp.clickCard()
+        self.hp.clickNews()
 
         time.sleep(5)

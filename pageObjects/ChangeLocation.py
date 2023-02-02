@@ -4,10 +4,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class ChangeLocation:
-    # class variable to store the class name of the location icon element
+    # variable to store the class name of the location icon element
     click_location_icon_class = "android.widget.Button"
-    # class variable to store the xpath of the location element
-    click_location_xpath = '//android.widget.Button[@content-desc="co"]'
+    # variable to store the xpath of the location element
+    click_location_xpath = '//android.widget.Button[@content-desc="ae"]'
+    # variable to store location text
+    get_selected_location_text_xpath= '//android.widget.Button[@content-desc="AE"]'
 
     def __init__(self, driver):
         # store the webdriver instance
@@ -40,3 +42,12 @@ class ChangeLocation:
 
         # click the location element
         element.click()
+
+    def getlocationText(self):
+
+        # wait for visibility of element with the specified class name
+        element = WebDriverWait(self.driver, 20).until(
+            EC.visibility_of_element_located((By.XPATH, self.get_selected_location_text_xpath)))
+        location_name= self.driver.find_element(By.XPATH, self.get_selected_location_text_xpath)
+        tag_name = location_name.tag_name
+        return tag_name

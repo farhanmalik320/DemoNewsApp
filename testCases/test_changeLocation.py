@@ -31,4 +31,14 @@ class Test_ChangeLocation:
 
         self.cl.clickLocation()
 
-        time.sleep(5)
+        self.actualtext= self.cl.getlocationText()
+
+        print(self.actualtext)
+
+        self.excpectedtext= 'AE'
+
+        if self.actualtext== self.excpectedtext:
+            print("Test case passed")
+
+        else:
+            print("Test case fail")
