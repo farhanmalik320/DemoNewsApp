@@ -45,7 +45,7 @@ class ChangeLocation:
 
     def getlocationText(self):
 
-        # wait for visibility of element with the specified class name
+        # wait for visibility of element with the specified xpath
         element = WebDriverWait(self.driver, 20).until(
             EC.visibility_of_element_located((By.XPATH, self.get_selected_location_text_xpath)))
         location_name= self.driver.find_element(By.XPATH, self.get_selected_location_text_xpath)

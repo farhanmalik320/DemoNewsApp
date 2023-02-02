@@ -1,6 +1,5 @@
 from pageObjects.SignupPage import SignupPage
 from Configurations.Config import testdata
-import time
 import pytest
 
 class Test_Signup:
@@ -19,5 +18,3 @@ class Test_Signup:
         self.lp.enterEmail(self.email)
         self.lp.enterPassword(self.password)
         self.lp.clickSignup()
-
-

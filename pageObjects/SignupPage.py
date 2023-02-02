@@ -13,29 +13,23 @@ class SignupPage:
         self.driver = driver
 
     def clickMainSignup(self):
-        """
-        Wait for the main signup button to be clickable and then click it
-        """
+
         # Use the WebDriverWait to wait for the element to be clickable
         element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.signup_btn_xpath)))
         # Click the element
         element.click()
 
     def enterName(self, name):
-        """
-        Enter the given name in the name input field
-        """
+
         # Find all the elements with the given class name
         name_field = self.driver.find_elements(By.CLASS_NAME, self.input_field_class)
-        # Click the first element (assumed to be the name input field)
+        # Click the first element
         name_field[0].click()
         # Send the given name to the name input field
         name_field[0].send_keys(name)
 
     def enterEmail(self, email):
-        """
-        Enter the given email in the email input field
-        """
+
         # Find all the elements with the given class name
         email_field = self.driver.find_elements(By.CLASS_NAME, self.input_field_class)
         # Click the second element (assumed to be the email input field)
@@ -44,9 +38,7 @@ class SignupPage:
         email_field[1].send_keys(email)
 
     def enterPassword(self, password):
-        """
-        Enter the given password in the password input field
-        """
+
         # Find all the elements with the given class name
         password_field = self.driver.find_elements(By.CLASS_NAME, self.input_field_class)
         # Click the third element (assumed to be the password input field)
@@ -55,8 +47,6 @@ class SignupPage:
         password_field[2].send_keys(password)
 
     def clickSignup(self):
-        """
-        Click the signup button
-        """
+
         # Find the signup button using the XPath locator and click it
         signup_btn = self.driver.find_element(By.XPATH, self.signup_btn_xpath).click()

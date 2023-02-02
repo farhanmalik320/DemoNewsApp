@@ -1,8 +1,6 @@
 from pageObjects.ChangeLocation import ChangeLocation
-from pageObjects.HomePage import HomePage
 from pageObjects.LoginPage import LoginPage
 from Configurations.Config import testdata
-import time
 import pytest
 
 class Test_ChangeLocation:
@@ -31,13 +29,13 @@ class Test_ChangeLocation:
 
         self.cl.clickLocation()
 
-        self.actualtext= self.cl.getlocationText()
+        self.actual_text= self.cl.getlocationText()
 
-        print(self.actualtext)
+        print(self.actual_text)
 
-        self.excpectedtext= 'AE'
+        self.expected_text= 'AE'
 
-        if self.actualtext== self.excpectedtext:
+        if self.actual_text== self.expected_text:
             print("Test case passed")
 
         else:

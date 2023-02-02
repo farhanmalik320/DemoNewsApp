@@ -1,7 +1,6 @@
 from pageObjects.HomePage import HomePage
 from pageObjects.LoginPage import LoginPage
 from Configurations.Config import testdata
-import time
 import pytest
 
 class Test_HomePage:
@@ -27,5 +26,3 @@ class Test_HomePage:
         self.hp = HomePage(self.driver)
 
         self.hp.clickNews()
-
-        time.sleep(5)

@@ -10,7 +10,6 @@ class Test_Login:
 
     @pytest.fixture(scope="function")
     def setup(self, appium_driver_setup):
-
         self.driver = appium_driver_setup
 
     def test_login(self, setup):

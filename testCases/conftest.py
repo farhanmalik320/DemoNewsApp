@@ -14,4 +14,4 @@ def appium_driver_setup(request):
     }
     driver = webdriver.Remote("http://localhost:4723/wd/hub", desiredcap)
     yield driver
-    #driver.quit()
+    driver.quit()
