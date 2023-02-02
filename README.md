@@ -17,5 +17,7 @@ This project automates the application flow using Appium and Selenium with Pytho
 pip install -r requirements.txt
 * Start the Appium server
 * Run the following command in your terminal/command prompt to execute the tests:
+
+
 pytest testCases/test_login.py
 * The test results and HTML report will be generated after the tests have completed.
