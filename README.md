@@ -10,8 +10,8 @@ This project automates the application flow using Appium and Selenium with Pytho
 * Install Pytest
 
 ## Running the Project
-*Clone the project repository to your local machine
-*Install the required packages by running the following command in your terminal/command prompt:
+* Clone the project repository to your local machine
+* Install the required packages by running the following command in your terminal/command prompt:
 pip install -r requirements.txt
-*Start the Appium server
-*Run the following command in your terminal/command prompt to execute the tests:
+* Start the Appium server
+* Run the following command in your terminal/command prompt to execute the tests:
